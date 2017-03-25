@@ -286,7 +286,30 @@ exec nm-applet
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+	output "LVDS1" #Laptop Screen
 	font pango:FontAwesome 9, Terminus 9
+	status_command i3blocks
+	strip_workspace_numbers yes
+}
+
+bar {
+	output "VGA1" #Laptop Extern Screen
+	font pango:FontAwesome 10, Terminus 10
+	status_command i3blocks
+	strip_workspace_numbers yes
+}
+
+bar {
+	output "HDMI-0"   #PC main screen (landscape)
+	output "DVI-D-0"  #PC TV right
+	font pango:FontAwesome 12, Terminus 12
+	status_command i3blocks
+	strip_workspace_numbers yes
+}
+
+bar {
+	output "HDMI-1"  #PC left screen (portrait)
+	font pango:FontAwesome 10, Terminus 10
 	status_command i3blocks
 	strip_workspace_numbers yes
 }
