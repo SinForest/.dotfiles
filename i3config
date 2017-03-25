@@ -270,9 +270,9 @@ exec --no-startup-id i3-msg 'workspace 16:; exec telegram-desktop'
 # exec --no-startup-id i3-msg 'workspace 17:; exec i3-sensible-terminal -e htop'
 exec --no-startup-id i3-msg 'workspace 0:; exec i3-sensible-terminal'
 
-for_window [title="Google Chrome"] border none
-for_window [title="Telegram"] border none
-for_window [title="WeeChat 1.6"] border none
+#for_window [title="Google Chrome"] border none
+#for_window [title="Telegram"] border none
+#for_window [title="WeeChat 1.6"] border none
 
 
 #for_window [title="Google Chrome"] move workspace number 14: #buggy!!!
