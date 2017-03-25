@@ -63,6 +63,10 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# move workspace
+bindsym $mod+Ctrl+Left move workspace to output left
+bindsym $mod+Ctrl+Right move workspace to output right
+
 # split in horizontal orientation
 bindsym $mod+h split h
 
@@ -274,8 +278,8 @@ for_window [title="Google Chrome"] border none
 for_window [title="Telegram"] border none
 for_window [title="WeeChat 1.6"] border none
 
-
 #for_window [title="Google Chrome"] move workspace number 14: #buggy!!!
+
 exec nm-applet
 
 
