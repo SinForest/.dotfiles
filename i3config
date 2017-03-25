@@ -90,8 +90,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # change border
-bindsym $mod+t border normal 1
-bindsym $mod+Shift+t border none
+bindsym $mod+Shift+t border normal 1
+bindsym $mod+t border none
 
 # switch to workspace
 bindsym $mod+dead_circumflex workspace 0:
@@ -259,6 +259,8 @@ focus_follows_mouse no
 bindsym --release button2 kill
 bindsym button3 floating toggle
 
+#Border-Style
+new_window normal 1
 
 #autostart
 exec --no-startup-id i3-msg 'workspace 14:; exec google-chrome-stable'
@@ -267,6 +269,11 @@ exec --no-startup-id i3-msg 'workspace 16:; exec $weechat'
 exec --no-startup-id i3-msg 'workspace 16:; exec telegram-desktop'
 # exec --no-startup-id i3-msg 'workspace 17:; exec i3-sensible-terminal -e htop'
 exec --no-startup-id i3-msg 'workspace 0:; exec i3-sensible-terminal'
+
+for_window [title="Google Chrome"] border none
+for_window [title="Telegram"] border none
+for_window [title="WeeChat 1.6"] border none
+
 
 #for_window [title="Google Chrome"] move workspace number 14: #buggy!!!
 exec nm-applet
