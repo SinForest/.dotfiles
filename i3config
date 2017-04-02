@@ -16,6 +16,7 @@ set $mod Mod4
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:FontAwesome 7, Terminus 7
+
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -316,4 +317,11 @@ bar {
 	status_command i3blocks
 	strip_workspace_numbers yes
 	tray_output primary
+	#colors {
+	#	background				#7288A5
+	#	statusline				#000000
+	#	active_workspace		#142F53 #4C688B #FFFFFF
+	#	focused_workspace		#142F53 #2C4A70 #FFFFFF
+	#	inactive_workspace	#142F53 #A6B6CA #FFFFFF
+	#}
 }
