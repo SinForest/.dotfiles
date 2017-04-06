@@ -15,6 +15,9 @@ URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
 URxvt.secondaryWheel: 1
 
+URxvt.transparent:   true
+URxvt.shading:       25
+
 *color0:  #2E3436
 *color1:  #a40000
 *color2:  #4E9A06

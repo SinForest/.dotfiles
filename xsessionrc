@@ -3,9 +3,10 @@
 # xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
 # xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 6 7 4 5
 
-xmodmap -e "clear lock"
-xmodmap -e "keycode 66 = Escape"
-xmodmap -e "keycode 9 = Caps_Lock"
-xmodmap -e "add Lock = Caps_Lock"
+# no longer needed, since it's a localectl xkeymap option
+#xmodmap -e "clear lock"
+#xmodmap -e "keycode 66 = Escape"
+#xmodmap -e "keycode 9 = Caps_Lock"
+#xmodmap -e "add Lock = Caps_Lock"
 
 # xinput --set-prop "Wacom ISDv4 E6 Finger touch" "Wacom Enable Touch" 0

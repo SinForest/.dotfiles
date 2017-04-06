@@ -28,7 +28,7 @@ font pango:FontAwesome 7, Terminus 7
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvtcd
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -243,7 +243,8 @@ bindsym XF86Launch1 exec ~/.scripts/i3lock_screenshot.sh
 #bindsym $mod+L exec i3lock
 
 #Wallpaper
-exec feh --bg-scale ~/Bilder/laplacesche_minions.jpg
+#exec feh --bg-scale ~/Bilder/laplacesche_minions.jpg
+exec --no-startup-id nitrogen --restore
 
 #Screenshot
 bindsym $mod+Print exec "gnome-screenshot -f ~/Bilder/Screenshots/Screenshot_$(date +%F_%H:%M:%S).png"
@@ -267,21 +268,21 @@ bindsym button3 floating toggle
 #Border-Style
 new_window normal 1
 
-#autostart
+#autostart windows
 exec --no-startup-id i3-msg 'workspace 14:; exec google-chrome-stable'
 exec --no-startup-id i3-msg 'workspace 15:; exec thunderbird'
 exec --no-startup-id i3-msg 'workspace 16:; exec $weechat'
 exec --no-startup-id i3-msg 'workspace 16:; exec telegram-desktop'
-# exec --no-startup-id i3-msg 'workspace 17:; exec i3-sensible-terminal -e htop'
-exec --no-startup-id i3-msg 'workspace 0:; exec i3-sensible-terminal'
+exec --no-startup-id i3-msg 'workspace 0:; exec urxvtcd'
 
 #for_window [title="Google Chrome"] border none
 #for_window [title="Telegram"] border none
 #for_window [title="WeeChat 1.6"] border none
-
 #for_window [title="Google Chrome"] move workspace number 14: #buggy!!!
 
+#autostart stuff
 exec nm-applet
+exec nvidia-settings --load-config-only #why does this not work in Xsessionrc or xinitrc? :(
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status

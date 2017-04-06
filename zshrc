@@ -67,6 +67,9 @@ export ARCHFLAGS="-arch x86_64"
 export WORKON_HOME=~/Envs
 source /usr/bin/virtualenvwrapper.sh
 
+# Python PIL
+export SCIPY_PIL_IMAGE_VIEWER="/usr/bin/display"
+
 # Options
 
 setopt noclobber				# no file overwriting with > - Use >! instead
