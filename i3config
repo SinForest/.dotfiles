@@ -283,7 +283,7 @@ exec --no-startup-id i3-msg 'workspace 0:; exec sakura'
 #autostart stuff
 exec nm-applet
 exec nvidia-settings --load-config-only #why does this not work in Xsessionrc or xinitrc? :(
-xcompmgr -c -f -n
+exec xcompmgr -c -f -n
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
