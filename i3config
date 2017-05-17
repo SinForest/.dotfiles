@@ -304,8 +304,15 @@ bar {
 }
 
 bar {
-	output "HDMI-0"   #PC main screen (landscape)
-	output "DVI-D-0"  #PC TV right
+	output "HDMI-1"  #PC TV right
+	font pango:FontAwesome 15, Terminus 15
+	status_command i3blocks
+	strip_workspace_numbers yes
+	tray_output primary
+}
+
+bar {
+	output "DVI-D-0"   #PC main screen (landscape)
 	font pango:FontAwesome 12, Terminus 12
 	status_command i3blocks
 	strip_workspace_numbers yes
@@ -313,7 +320,7 @@ bar {
 }
 
 bar {
-	output "HDMI-1"  #PC left screen (portrait)
+	output "HDMI-0"  #PC left screen (portrait)
 	font pango:FontAwesome 10, Terminus 10
 	status_command i3blocks
 	strip_workspace_numbers yes
