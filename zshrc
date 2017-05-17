@@ -58,7 +58,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/bin/c
 
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR='atom'
+export EDITOR='atom --wait'
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
