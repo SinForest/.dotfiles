@@ -282,6 +282,10 @@ exec --no-startup-id i3-msg 'workspace 0:; exec urxvtcd'
 
 #autostart stuff
 exec nm-applet
+exec blueman-applet
+exec pasystray
+exec redshift-gtk
+
 exec nvidia-settings --load-config-only #why does this not work in Xsessionrc or xinitrc? :(
 
 
