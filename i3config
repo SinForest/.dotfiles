@@ -289,7 +289,7 @@ exec redshift-gtk
 
 #autostart stuff
 exec nvidia-settings --load-config-only #why does this not work in Xsessionrc or xinitrc? :(
-exec --no-startup-id compton
+exec --no-startup-id compton -b
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status

@@ -1,3 +1,13 @@
+# basic configuration, thx askubuntu
+backend = "glx";
+vsync = "opengl-swc";
+
+glx-copy-from-front = true;
+glx-swap-method = 2;
+xrender-sync = true;
+xrender-sync-fence = true;
+
+# fixes i3 transparency
 opacity-rule = [
   "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
 ];
