@@ -1,3 +1,6 @@
+# Path to your oh-my-zsh installation.
+ZSH=~/.oh-my-zsh
+
 # SWIG
 export SWIG_LIB=/export/home/pdamman/clones/swig-3.0.12/Lib
 
