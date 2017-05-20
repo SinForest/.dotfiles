@@ -1,5 +1,5 @@
-# Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh
+# Additional Commands
+source ~/.zshrc_add
 
 # Set name of the theme to load.
 ZSH_THEME="bullet-train-custom"
@@ -114,6 +114,3 @@ alias :S="pacaur -S"
 alias :Ss="pacaur -Ss"
 alias :R="pacaur -R"
 alias :Syu="pacaur -Syu"
-
-# Additional Commands
-source ~/.zshrc_add
