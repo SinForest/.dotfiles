@@ -80,6 +80,8 @@ alias sctl="systemctl"
 alias bgd="bg && disown"
 alias clr="clear"
 alias hiber="~/.scripts/i3lock_screenshot.sh && systemctl hibernate"
+alias rescreen="screen -xR -S"
+alias resc=rescreen
 
 # mount
 alias mountiso="mount -o loop -t iso9660"
@@ -112,3 +114,6 @@ alias :S="pacaur -S"
 alias :Ss="pacaur -Ss"
 alias :R="pacaur -R"
 alias :Syu="pacaur -Syu"
+
+# Additional Commands
+source ~/.zshrc_add
