@@ -35,7 +35,7 @@ fi
 
 # PROMPT
 if [ ! -n "${BULLETTRAIN_PROMPT_CHAR+1}" ]; then
-  BULLETTRAIN_PROMPT_CHAR=" "
+  BULLETTRAIN_PROMPT_CHAR=" "
 fi
 if [ ! -n "${BULLETTRAIN_PROMPT_ROOT+1}" ]; then
   BULLETTRAIN_PROMPT_ROOT=true
@@ -66,7 +66,7 @@ if [ ! -n "${BULLETTRAIN_TIME_BG+1}" ]; then
   BULLETTRAIN_TIME_BG=black
 fi
 if [ ! -n "${BULLETTRAIN_TIME_FG+1}" ]; then
-  BULLETTRAIN_TIME_FG=blue
+  BULLETTRAIN_TIME_FG=208 #orange
 fi
 
 # CUSTOM
@@ -104,7 +104,7 @@ fi
 
 # RUBY
 if [ ! -n "${BULLETTRAIN_RUBY_BG+1}" ]; then
-  BULLETTRAIN_RUBY_BG=red
+  BULLETTRAIN_RUBY_BG=magenta
 fi
 if [ ! -n "${BULLETTRAIN_RUBY_FG+1}" ]; then
   BULLETTRAIN_RUBY_FG=white
@@ -149,7 +149,7 @@ if [ ! -n "${BULLETTRAIN_GIT_COLORIZE_DIRTY_BG_COLOR+1}" ]; then
   BULLETTRAIN_GIT_COLORIZE_DIRTY_BG_COLOR=yellow
 fi
 if [ ! -n "${BULLETTRAIN_GIT_BG+1}" ]; then
-  BULLETTRAIN_GIT_BG=white
+  BULLETTRAIN_GIT_BG=250 #light-grey
 fi
 if [ ! -n "${BULLETTRAIN_GIT_FG+1}" ]; then
   BULLETTRAIN_GIT_FG=black
@@ -177,7 +177,7 @@ if [ ! -n "${BULLETTRAIN_CONTEXT_BG+1}" ]; then
   BULLETTRAIN_CONTEXT_BG=white
 fi
 if [ ! -n "${BULLETTRAIN_CONTEXT_FG+1}" ]; then
-  BULLETTRAIN_CONTEXT_FG=black
+  BULLETTRAIN_CONTEXT_FG=017 #black-blue
 fi
 if [ ! -n "${BULLETTRAIN_CONTEXT_HOSTNAME+1}" ]; then
   BULLETTRAIN_CONTEXT_HOSTNAME=%m
@@ -268,8 +268,7 @@ fi
 # ------------------------------------------------------------------------------
 
 CURRENT_BG='NONE'
-SEGMENT_SEPARATOR=''
-
+SEGMENT_SEPARATOR=' '
 # Begin a segment
 # Takes three arguments, background, foreground and text. All of them can be omitted,
 # rendering default background/foreground and no text.
@@ -289,7 +288,7 @@ prompt_segment() {
 # End the prompt, closing any open segments
 prompt_end() {
   if [[ -n $CURRENT_BG ]]; then
-    echo -n " %{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
+    echo -n "%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR"
   else
     echo -n "%{%k%}"
   fi
