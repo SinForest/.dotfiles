@@ -52,7 +52,7 @@ if [ ! -n "${BULLETTRAIN_STATUS_EXIT_SHOW+1}" ]; then
   BULLETTRAIN_STATUS_EXIT_SHOW=false
 fi
 if [ ! -n "${BULLETTRAIN_STATUS_BG+1}" ]; then
-  BULLETTRAIN_STATUS_BG=green
+  BULLETTRAIN_STATUS_BG=029
 fi
 if [ ! -n "${BULLETTRAIN_STATUS_ERROR_BG+1}" ]; then
   BULLETTRAIN_STATUS_ERROR_BG=red
@@ -514,7 +514,7 @@ prompt_status() {
   [[ $RETVAL -ne 0 && $BULLETTRAIN_STATUS_EXIT_SHOW != true ]] && symbols+="✘"
   [[ $RETVAL -ne 0 && $BULLETTRAIN_STATUS_EXIT_SHOW == true ]] && symbols+="✘ $RETVAL"
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡%f"
-  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="⚙"
+  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+=""
 
   if [[ -n "$symbols" && $RETVAL -ne 0 ]]; then
     prompt_segment $BULLETTRAIN_STATUS_ERROR_BG $BULLETTRAIN_STATUS_FG "$symbols"
