@@ -273,7 +273,7 @@ new_window normal 1
 exec --no-startup-id i3-msg 'workspace 14:; exec google-chrome-stable'
 exec --no-startup-id i3-msg 'workspace 15:; exec thunderbird'
 exec --no-startup-id i3-msg 'workspace 16:; exec $weechat'
-exec --no-startup-id i3-msg 'workspace 16:; exec telegram-desktop'
+exec --no-startup-id i3-msg 'workspace 16:; exec telegram-desktop; exec franz-bin'
 exec --no-startup-id i3-msg 'workspace 0:; exec termite'
 
 #for_window [title="Google Chrome"] border none
