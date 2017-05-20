@@ -1,8 +1,11 @@
+
+# I DON'T USE THIS ANYMORE FOR THE SAKE OF TERMITE \o/
+
 URxvt.saveLines: 10000
 URxvt.scrollBar: false
 URxvt.foreground: white
 URxvt.background: black
-URxvt.font: xft:DejaVu Sans Mono for Powerline:size=10,xft:Noto Emoji:size=10
+URxvt.font: xft:DejaVu Sans Mono for Powerline:size=9
 #URxvt.perl-ext-common: mark-urls
 URxvt.urlLauncher: google-chrome-stable
 

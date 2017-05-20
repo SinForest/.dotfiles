@@ -28,7 +28,8 @@ font pango:FontAwesome 7, Terminus 7
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtcd
+bindsym $mod+Return exec termite
+#bindsym $mod+Return exec urxvtcd
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -251,7 +252,7 @@ bindsym $mod+Print exec "gnome-screenshot -f ~/Bilder/Screenshots/Screenshot_$(d
 bindsym $mod+Shift+Print exec "gnome-screenshot -w -f ~/Bilder/Screenshots/Screenshot_$(date +%F_%H:%M:%S).png"
 
 #WeeChat
-set $weechat urxvtcd -e zsh -c "ssh -t eris screen -U -S irc -xR weechat"
+set $weechat termite -e 'zsh -c "ssh -t eris screen -U -S irc -xR weechat"'
 bindsym $mod+Ctrl+o exec $weechat
 
 #420
@@ -273,20 +274,22 @@ exec --no-startup-id i3-msg 'workspace 14:; exec google-chrome-stable'
 exec --no-startup-id i3-msg 'workspace 15:; exec thunderbird'
 exec --no-startup-id i3-msg 'workspace 16:; exec $weechat'
 exec --no-startup-id i3-msg 'workspace 16:; exec telegram-desktop'
-exec --no-startup-id i3-msg 'workspace 0:; exec urxvtcd'
+exec --no-startup-id i3-msg 'workspace 0:; exec termite'
 
 #for_window [title="Google Chrome"] border none
 #for_window [title="Telegram"] border none
 #for_window [title="WeeChat 1.6"] border none
 #for_window [title="Google Chrome"] move workspace number 14: #buggy!!!
 
-#autostart stuff
+#autostart applets
 exec nm-applet
 exec blueman-applet
 exec pasystray
 exec redshift-gtk
 
+#autostart stuff
 exec nvidia-settings --load-config-only #why does this not work in Xsessionrc or xinitrc? :(
+exec --no-startup-id compton
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
