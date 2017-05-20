@@ -1,2 +1,6 @@
 # Path to your oh-my-zsh installation.
 ZSH=/usr/share/oh-my-zsh
+
+# Python virtualenv
+export WORKON_HOME=~/Envs
+source /usr/bin/virtualenvwrapper.sh

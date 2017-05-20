@@ -32,10 +32,6 @@ export EDITOR='atom --wait'
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-# Python virtualenv
-export WORKON_HOME=~/Envs
-source /usr/bin/virtualenvwrapper.sh
-
 # Python PIL
 export SCIPY_PIL_IMAGE_VIEWER="/usr/bin/display"
 
