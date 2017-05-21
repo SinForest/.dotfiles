@@ -35,7 +35,7 @@ fi
 
 # PROMPT
 if [ ! -n "${BULLETTRAIN_PROMPT_CHAR+1}" ]; then
-  BULLETTRAIN_PROMPT_CHAR=" "
+  BULLETTRAIN_PROMPT_CHAR=""
 fi
 if [ ! -n "${BULLETTRAIN_PROMPT_ROOT+1}" ]; then
   BULLETTRAIN_PROMPT_ROOT=true
@@ -215,7 +215,7 @@ else
   ZSH_THEME_GIT_PROMPT_MODIFIED=$BULLETTRAIN_GIT_MODIFIED
 fi
 if [ ! -n "${BULLETTRAIN_GIT_DELETED+1}" ]; then
-  ZSH_THEME_GIT_PROMPT_DELETED=" %F{red}✖%F{black}"
+  ZSH_THEME_GIT_PROMPT_DELETED=" %F{red}%F{black}"
 else
   ZSH_THEME_GIT_PROMPT_DELETED=$BULLETTRAIN_GIT_DELETED
 fi
@@ -530,7 +530,7 @@ prompt_chars() {
   local bt_prompt_chars="${BULLETTRAIN_PROMPT_CHAR}"
 
   if [[ $BULLETTRAIN_PROMPT_ROOT == true ]]; then
-    bt_prompt_chars="%(!.%F{red}# .%F{green}${bt_prompt_chars}%f)"
+    bt_prompt_chars=" %(!.%F{red}.%F{green}${bt_prompt_chars}%f)"
   fi
 
   if [[ $BULLETTRAIN_PROMPT_SEPARATE_LINE == false ]]; then
