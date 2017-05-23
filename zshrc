@@ -45,20 +45,27 @@ setopt share_history			# instant history between open shells
 
 # pip zsh completion
 function _pip_completion {
-  local words cword
-  read -Ac words
-  read -cn cword
-  reply=( $( COMP_WORDS="$words[*]" \z
-             COMP_CWORD=$(( cword-1 )) \
-             PIP_AUTO_COMPLETE=1 $words[1] ) )
+	local words cword
+	read -Ac words
+	read -cn cword
+	reply=( $( COMP_WORDS="$words[*]" \z
+	          COMP_CWORD=$(( cword-1 )) \
+	          PIP_AUTO_COMPLETE=1 $words[1] ) )
 }
 compctl -K _pip_completion pip
 
 # functions
 function cl () {
-    cd "$@" && ls
-    }
+	cd "$@" && ls
+	}
 compdef cl=cd
+
+# refresh promt when executing command (for time) [thx stackoverflow]
+function _reset-prompt-and-accept-line {
+	zle reset-prompt
+	zle .accept-line     # Note the . meaning the built-in accept-line.
+}
+zle -N accept-line _reset-prompt-and-accept-line
 
 
 ### ALIASES ###
@@ -77,22 +84,18 @@ alias bgd="bg && disown"
 alias clr="tput reset || clear"
 alias hiber="~/.scripts/i3lock_screenshot.sh && systemctl hibernate"
 alias rescreen="screen -xR -S"
-alias resc=rescreen
+alias resc="rescreen"
 
-# mount
-alias mountiso="mount -o loop -t iso9660"
-alias mountnrg="mount -o loop,offset=307200"
-alias mtp="jmtpfs ~/mnt/MTP"
-alias umtp="fusermount -u ~/mnt/MTP"
+# suffix
+alias -s py="python"
+alias -s jar="java -jar"
+alias -s exe="wine"
+alias -s pdf="evince"
 
-# PostgreSQL
-alias globedb="pgcli postgres://postgres:asdf1234@localhost/globedb"
-alias musicdb="pgcli postgres://postgres:asdf1234@localhost/musicdb"
-
-# C++
-alias g11="g++ -std=c++11"
-alias c11="c++ -std=c++11"
-alias clang11="clang++ -std=c++11"
+# global
+alias -g :G="| grep -i"
+alias -g :L="| less"
+alias -g :NULL="> /dev/null 2>&1"
 
 # GUI-Stuff
 alias a="atom"
@@ -110,3 +113,21 @@ alias :S="pacaur -S"
 alias :Ss="pacaur -Ss"
 alias :R="pacaur -R"
 alias :Syu="pacaur -Syu"
+
+# PostgreSQL
+alias globedb="pgcli postgres://postgres:asdf1234@localhost/globedb"
+alias musicdb="pgcli postgres://postgres:asdf1234@localhost/musicdb"
+
+# C++
+alias g11="g++ -std=c++11"
+alias c11="c++ -std=c++11"
+alias clang11="clang++ -std=c++11"
+
+# mount
+alias mountiso="mount -o loop -t iso9660"
+alias mountnrg="mount -o loop,offset=307200"
+alias mtp="jmtpfs ~/mnt/MTP"
+alias umtp="fusermount -u ~/mnt/MTP"
+
+#fix use of TERMITE on shh machines
+alias fix_termite="wget https://raw.githubusercontent.com/thestinger/termite/master/termite.terminfo && tic -x termite.terminfo"
