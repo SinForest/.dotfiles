@@ -57,8 +57,12 @@ compctl -K _pip_completion pip
 # functions
 function cl () {
 	cd "$@" && ls
-	}
+}
 compdef cl=cd
+
+function qpy () {
+	python -c "from math import *;print( $@ )"
+}
 
 # refresh promt when executing command (for time) [thx stackoverflow]
 function _reset-prompt-and-accept-line {
