@@ -270,22 +270,19 @@ bindsym button3 floating toggle
 new_window normal 1
 
 #autostart windows
-exec --no-startup-id i3-msg 'workspace 14:; exec google-chrome-stable'
-exec --no-startup-id i3-msg 'workspace 15:; exec thunderbird'
-exec --no-startup-id i3-msg 'workspace 16:; exec $weechat'
-exec --no-startup-id i3-msg 'workspace 16:; exec telegram-desktop; exec franz-bin'
-exec --no-startup-id i3-msg 'workspace 0:; exec termite'
-
-#for_window [title="Google Chrome"] border none
-#for_window [title="Telegram"] border none
-#for_window [title="WeeChat 1.6"] border none
-#for_window [title="Google Chrome"] move workspace number 14: #buggy!!!
+#exec --no-startup-id i3-msg 'workspace 14:; exec google-chrome-stable'
+#exec --no-startup-id i3-msg 'workspace 15:; exec thunderbird'
+#exec --no-startup-id i3-msg 'workspace 16:; exec $weechat'
+#exec --no-startup-id i3-msg 'workspace 16:; exec telegram-desktop; exec franz-bin'
+#exec --no-startup-id i3-msg 'workspace 0:; exec termite'
 
 #autostart applets
 exec nm-applet
 exec blueman-applet
 exec pasystray
 exec redshift-gtk
+exec telegram-desktop -startintray
+exec franz-bin
 
 #autostart stuff
 exec nvidia-settings --load-config-only #why does this not work in Xsessionrc or xinitrc? :(
