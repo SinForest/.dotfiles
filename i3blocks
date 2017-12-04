@@ -40,43 +40,13 @@ command=~/coding/i3blocks-modules/touchscreen.py
 interval=60
 signal=4
 
-
-# Volume indicator
-#
-# The first parameter sets the step (and units to display)
-# The second parameter overrides the mixer selection
-# See the script for details.
 [volume]
-#label=VOL
-label=♪
-instance=Master
-#instance=PCM
-interval=4
+command=~/coding/i3blocks-modules/volume.py
+markup=pango
+interval=5
 signal=1
 
-#[memory]
-#label=SWAP
-#instance=swap
-#separator=false
-#interval=30
-
-# Disk usage
-#
-# The directory defaults to $HOME if the instance is not specified.
-# The script may be called with a optional argument to set the alert
-# (defaults to 10 for 10%).
-#[disk]
-#label=HOME
-#instance=/mnt/data
-#interval=30
-
-# Network interface monitoring
-#
-# If the instance is not specified, use the interface used for default route.
-# The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
-
 [backlight]
-#instance=wlp3s0
 command=~/coding/i3blocks-modules/backlight.py
 markup=pango
 interval=5
@@ -117,14 +87,10 @@ markup=pango
 interval=10
 command=~/coding/i3blocks-modules/ram.py
 
-# CPU usage
-#
-# The script may be called with -w and -c switches to specify thresholds,
-# see the script for details.
 [cpu_usage]
 markup=pango
 command=~/coding/i3blocks-modules/cpu.py
-interval=10
+interval=2
 #signal=3
 #separator=false
 

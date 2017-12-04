@@ -23,6 +23,11 @@ foreground      = #c5c5c5
 foreground_bold = #c5c5c5
 cursor          = #c5c5c5
 
+# presentation mode
+#background      = rgba(255, 255, 255, 0.75)
+#foreground      = #000000
+#foreground_bold = #000000
+
 # black
 color0  = #1c1c1c
 color8  = #666666

@@ -1,6 +1,3 @@
-# Additional Commands
-source ~/.zshrc_add
-
 # Set name of the theme to load.
 ZSH_THEME="bullet-train-custom"
 
@@ -25,6 +22,9 @@ plugins=(git python svn zsh-syntax-highlighting)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/bin/core_perl:/opt/cuda/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Additional Commands
+source ~/.zshrc_add
+
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR='atom --wait'
@@ -48,11 +48,12 @@ function _pip_completion {
 	local words cword
 	read -Ac words
 	read -cn cword
-	reply=( $( COMP_WORDS="$words[*]" \z
+	reply=( $( COMP_WORDS="$words[*]" \
 	          COMP_CWORD=$(( cword-1 )) \
 	          PIP_AUTO_COMPLETE=1 $words[1] ) )
 }
 compctl -K _pip_completion pip
+#compctl -K _pip_completion pip2
 
 # functions
 function cl () {
@@ -89,9 +90,10 @@ alias clr="tput reset || clear"
 alias hiber="~/.scripts/i3lock_screenshot.sh && systemctl hibernate"
 alias rescreen="screen -xR -S"
 alias resc="rescreen"
+alias wo="workon"
 
 # suffix
-alias -s py="python"
+#alias -s py="python"
 alias -s jar="java -jar"
 alias -s exe="wine"
 alias -s pdf="evince"
@@ -119,19 +121,25 @@ alias :R="pacaur -R"
 alias :Syu="pacaur -Syu"
 
 # PostgreSQL
-alias globedb="pgcli postgres://postgres:asdf1234@localhost/globedb"
-alias musicdb="pgcli postgres://postgres:asdf1234@localhost/musicdb"
+alias globedb="clear && pgcli postgres://postgres:asdf1234@localhost/globedb"
+alias musicdb="clear && pgcli postgres://postgres:asdf1234@localhost/musicdb"
 
 # C++
 alias g11="g++ -std=c++11"
 alias c11="c++ -std=c++11"
 alias clang11="clang++ -std=c++11"
+alias clo="clang++ -std=c++14 -o"
+alias cxx="clang++ -Wall -Wextra -Wconversion -Wfloat-equal -Wunused --std=c++14"
+alias x="./a.out"
 
 # mount
 alias mountiso="mount -o loop -t iso9660"
 alias mountnrg="mount -o loop,offset=307200"
 alias mtp="jmtpfs ~/mnt/MTP"
 alias umtp="fusermount -u ~/mnt/MTP"
+
+# chmod
+alias c+x="chmod +x"
 
 #fix use of TERMITE on shh machines
 alias fix_termite="wget https://raw.githubusercontent.com/thestinger/termite/master/termite.terminfo && tic -x termite.terminfo"

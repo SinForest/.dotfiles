@@ -293,7 +293,7 @@ exec --no-startup-id compton -b
 # finds out, if available)
 bar {
 	output "LVDS1" #Laptop Screen
-	font pango:FontAwesome 9, Terminus 9
+	font pango:FontAwesome 8, Terminus 8
 	status_command i3blocks
 	strip_workspace_numbers yes
 	tray_output primary
