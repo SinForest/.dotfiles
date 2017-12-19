@@ -206,8 +206,8 @@ bindsym $mod+m mode "moveit"
 
 #added features
 
-#refresh i3blocks (Fn-key)
-bindsym XF86WakeUp exec pkill -SIGRTMIN+10 i3blocks && pkill -SIGRTMIN+4 i3blocks && pkill -SIGRTMIN+2 i3blocks && pkill -SIGRTMIN+1 i3blocks
+#refresh i3blocks (Fn-key) [this was a bad idea from the beginning]
+# bindsym XF86WakeUp exec pkill -SIGRTMIN+10 i3blocks && pkill -SIGRTMIN+4 i3blocks && pkill -SIGRTMIN+2 i3blocks && pkill -SIGRTMIN+1 i3blocks
 # +10: default
 # +1: volume
 # +2: backlight
@@ -281,12 +281,11 @@ exec nm-applet
 exec blueman-applet
 exec pasystray
 exec redshift-gtk
-exec telegram-desktop -startintray
-exec franz-bin
+exec rambox
 
 #autostart stuff
 exec nvidia-settings --load-config-only #why does this not work in Xsessionrc or xinitrc? :(
-exec --no-startup-id compton -b
+#exec --no-startup-id compton -b # suxx with my graphics config
 
 
 # Start i3bar to display a workspace bar (plus the system information i3status
