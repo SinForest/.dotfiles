@@ -1,5 +1,7 @@
 #!/bin/sh
 
+mkdir ~/.config/termite/
+
 rm ~/.i3blocks.conf
 rm ~/.config/i3/config
 rm ~/.Xdefaults
@@ -19,3 +21,7 @@ ln -s ~/.dotfiles/xsessionrc ~/.xsessionrc
 ln -s ~/.dotfiles/zshrc ~/.zshrc
 ln -s ~/.dotfiles/compton ~/.compton.conf
 ln -s ~/.dotfiles/termite ~/.config/termite/config
+
+TODO: link right zshrc_add to ~/.zshrc_add
+TODO: link right theme to ~/.oh-my-zsh/custom/themes/bullet-train-custom.zsh-theme
+

@@ -316,6 +316,7 @@ bar {
 
 bar {
 	output "DVI-D-0"   #PC main screen (landscape)
+	output "DVI-I-1"   #Server main screen (landscape)
 	font pango:FontAwesome 12, Terminus 12
 	status_command i3blocks
 	strip_workspace_numbers yes
