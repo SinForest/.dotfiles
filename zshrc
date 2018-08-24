@@ -27,7 +27,7 @@ source ~/.zshrc_add
 
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR='atom --wait'
+export EDITOR='/usr/bin/vim'
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -92,11 +92,14 @@ alias rescreen="screen -xR -S"
 alias resc="rescreen"
 alias wo="workon"
 
-# suffix
+# default options
+alias diff="diff --color"
+
+# suffix (actually, these suck...)
 #alias -s py="python"
-alias -s jar="java -jar"
-alias -s exe="wine"
-alias -s pdf="evince"
+#alias -s jar="java -jar"
+#alias -s exe="wine"
+#alias -s pdf="evince"
 
 # global
 alias -g :G="| grep -i"
@@ -111,14 +114,14 @@ alias cups="google-chrome-stable http://localhost:631/"
 alias sequoia="gdmap"
 
 # PacAur
-alias pS="pacaur -S"
-alias pSs="pacaur -Ss"
-alias pR="pacaur -R"
-alias pSyu="pacaur -Syu"
-alias :S="pacaur -S"
-alias :Ss="pacaur -Ss"
-alias :R="pacaur -R"
-alias :Syu="pacaur -Syu"
+alias pS="pikaur -S"
+alias pSs="pikaur -Ss"
+alias pR="pikaur -R"
+alias pSyu="pikaur -Syu"
+alias :S="pikaur -S"
+alias :Ss="pikaur -Ss"
+alias :R="pikaur -R"
+alias :Syu="pikaur -Syu"
 
 # PostgreSQL
 alias globedb="clear && pgcli postgres://postgres:asdf1234@localhost/globedb"
