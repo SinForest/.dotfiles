@@ -61,6 +61,18 @@ function cl () {
 }
 compdef cl=cd
 
+function ev () {
+	evince "$@" 2>/dev/null &
+}
+compdef ev=evince
+
+function xo () {
+	for i
+	do xournal "$i"&
+	done
+}
+compdef xo=xournal
+
 function qpy () {
 	python -c "from math import *;print( $@ )"
 }
@@ -109,7 +121,7 @@ alias -g :NULL="> /dev/null 2>&1"
 # GUI-Stuff
 alias a="atom"
 alias a.="atom ."
-alias na="nautilus --no-desktop . &>/dev/null &"
+alias na="nautilus . &>/dev/null &"
 alias cups="google-chrome-stable http://localhost:631/"
 alias sequoia="gdmap"
 
