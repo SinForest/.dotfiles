@@ -55,28 +55,6 @@ function _pip_completion {
 compctl -K _pip_completion pip
 #compctl -K _pip_completion pip2
 
-# functions
-function cl () {
-	cd "$@" && ls
-}
-compdef cl=cd
-
-function ev () {
-	evince "$@" 2>/dev/null &
-}
-compdef ev=evince
-
-function xo () {
-	for i
-	do xournal "$i"&
-	done
-}
-compdef xo=xournal
-
-function qpy () {
-	python -c "from math import *;print( $@ )"
-}
-
 # refresh promt when executing command (for time) [thx stackoverflow]
 function _reset-prompt-and-accept-line {
 	zle reset-prompt
@@ -158,3 +136,30 @@ alias c+x="chmod +x"
 
 #fix use of TERMITE on shh machines
 alias fix_termite="wget https://raw.githubusercontent.com/thestinger/termite/master/termite.terminfo && tic -x termite.terminfo"
+
+### FUNCTIONS ###
+
+function cl () {
+	cd "$@" && ls
+}
+compdef cl=cd
+
+function ev () {
+	evince "$@" 2>/dev/null &
+}
+compdef ev=evince
+
+function xo () {
+	if (( $# == 0 ))
+	then xournal&
+	fi
+
+	for i
+	do xournal "$i"&
+	done
+}
+compdef xo=xournal
+
+function qpy () {
+	python -c "from math import *;print( $@ )"
+}
