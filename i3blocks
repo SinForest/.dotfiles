@@ -34,6 +34,12 @@ markup=pango
 command=~/coding/i3blocks-modules/pd.py
 interval=10
 
+[updates]
+markup=pango
+command=~/coding/i3blocks-modules/updates.py
+interval=120
+signal=4
+
 [touchscreen]
 markup=pango
 command=~/coding/i3blocks-modules/touchscreen.py

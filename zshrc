@@ -145,17 +145,17 @@ function cl () {
 compdef cl=cd
 
 function ev () {
-	evince "$@" 2>/dev/null &
+	evince "$@" 2>/dev/null &!
 }
 compdef ev=evince
 
 function xo () {
 	if (( $# == 0 ))
-	then xournal&
+	then xournal &!
 	fi
 
 	for i
-	do xournal "$i"&
+	do xournal "$i" &!
 	done
 }
 compdef xo=xournal
