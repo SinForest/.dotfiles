@@ -149,6 +149,7 @@ function ev () {
 }
 compdef ev=evince
 
+alias xournal="xournalpp"
 function xo () {
 	if (( $# == 0 ))
 	then xournal &!
