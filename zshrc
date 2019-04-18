@@ -113,10 +113,6 @@ alias :Ss="pikaur -Ss"
 alias :R="pikaur -R"
 alias :Syu="pikaur -Syu"
 
-# PostgreSQL
-alias globedb="clear && pgcli postgres://postgres:asdf1234@localhost/globedb"
-alias musicdb="clear && pgcli postgres://postgres:asdf1234@localhost/musicdb"
-
 # C++
 alias g11="g++ -std=c++11"
 alias c11="c++ -std=c++11"
